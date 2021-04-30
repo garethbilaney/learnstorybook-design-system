@@ -10,7 +10,7 @@ export default {
 export const Standard = (args) => <Avatar {...args} />;
 Standard.args = {
   size: "large",
-  username: "Tom Coleman",
+  username: "Alex Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
 };
 
