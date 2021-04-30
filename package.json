@@ -1,7 +1,7 @@
 {
-  "name": "learnstorybook-design-system-template",
+  "name": "@garethbilaney/learnstorybook-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -49,6 +49,16 @@
       "last 1 safari version"
     ]
   },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@storybook/addon-actions": "^6.2.9",
@@ -57,7 +67,13 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "auto": "^10.26.0",
     "cross-env": "^7.0.3",
     "prettier": "^2.2.1"
-  }
+  },
+  "description": "Storybook design systems tutorial",
+  "main": "dist/index.js",
+  "repository": "https://github.com/garethbilaney/learnstorybook-design-system.git",
+  "author": "garethbilaney <gareth.bilaney@hhu.de>",
+  "license": "MIT"
 }
